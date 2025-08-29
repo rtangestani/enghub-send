@@ -1,0 +1,59 @@
+[
+  {
+    "id": "1",
+    "title": "Wind Turbine Aerodynamics",
+    "description": "CFD simulation of a horizontal‑axis wind turbine to evaluate aerodynamic performance under varying wind conditions using OpenFOAM. Includes CAD model, mesh, and post‑processing results.",
+    "longDescription": "Detailed pipeline with meshing, turbulence models (k‑ε and k‑ω), and validation against literature data.",
+    "category": ["Mechanical", "Aerospace"],
+    "image": "/images/project1.png",
+    "downloads": 42,
+    "likes": 12,
+    "dislikes": 0,
+    "comments": 4,
+    "owner": "Dr. Jane Doe",
+    "referencesTo": ["Betz limit analysis", "OpenFOAM tutorials"],
+    "referencesBy": [],
+    "attachments": [
+      { "filename": "turbine_model.stl", "url": "/files/turbine_model.stl" },
+      { "filename": "simulation_case.zip", "url": "/files/simulation_case.zip" }
+    ],
+    "collaborators": [ { "id": "1", "name": "John Smith", "avatar": "/images/avatar1.png", "role": "Engineer" } ]
+  },
+  {
+    "id": "2",
+    "title": "Smart Grid Voltage Optimization",
+    "description": "Reinforcement learning for reactive power control to reduce distribution losses and maintain voltage limits.",
+    "longDescription": "Implements DQN and actor–critic controllers on IEEE 33‑bus feeder with OpenDSS co‑simulation.",
+    "category": ["Electrical"],
+    "image": "/images/project2.png",
+    "downloads": 30,
+    "likes": 8,
+    "dislikes": 0,
+    "comments": 3,
+    "owner": "Sara Ahmed",
+    "referencesTo": ["OpenDSS", "IEEE 33‑bus"],
+    "referencesBy": ["Wind Farm Interconnect Study"],
+    "attachments": [ { "filename": "grid_data.csv", "url": "/files/grid_data.csv" } ],
+    "collaborators": [ { "id": "2", "name": "Sara Ahmed", "avatar": "/images/avatar2.png", "role": "Power Eng." } ]
+  },
+  {
+    "id": "3",
+    "title": "Bridge Structural Health Monitoring",
+    "description": "Data‑driven structural health monitoring of bridges using vibration sensors and finite element modelling. Provides raw sensor data and Jupyter notebooks for analysis.",
+    "longDescription": "Ambient vibration testing, modal identification, FE model updating, damage localization.",
+    "category": ["Civil", "Mechanical"],
+    "image": "/images/project3.png",
+    "downloads": 25,
+    "likes": 9,
+    "dislikes": 3,
+    "comments": 3,
+    "owner": "John Smith",
+    "referencesTo": ["SSI‑COV method", "N4SID"],
+    "referencesBy": ["Bridge Dataset Benchmark"],
+    "attachments": [
+      { "filename": "bridge_data.csv", "url": "/files/bridge_data.csv" },
+      { "filename": "analysis_notebook.ipynb", "url": "/files/analysis_notebook.ipynb" }
+    ],
+    "collaborators": [ { "id": "1", "name": "John Smith", "avatar": "/images/avatar1.png", "role": "Engineer" } ]
+  }
+]

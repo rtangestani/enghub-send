@@ -1,0 +1,22 @@
+.sidebar{
+  position: sticky;
+  top: 72px;
+  padding: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.heading{
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.group{ margin-bottom: 8px; }
+.item{ display:flex; align-items:center; gap:8px; margin:6px 0; font-size: 0.95em; }
+
+@media (max-width: 900px){
+  .sidebar{
+    position: static;
+  }
+}

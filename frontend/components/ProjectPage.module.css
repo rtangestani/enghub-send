@@ -1,0 +1,113 @@
+.grid{ display:grid; grid-template-columns: 320px 1fr 360px; gap:18px; }
+
+/* generic card */
+.panel{
+  background: var(--panel);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  padding:14px;
+}
+
+/* LEFT rail: sticky + constrained */
+.left{
+  position: sticky;
+  top: calc(64px + 18px);   /* below header with a small gap */
+  align-self: start;
+  height: fit-content;
+}
+
+/* left rail internals */
+.thumb{
+  width:100%; height:150px; object-fit:cover;
+  border-radius:10px; border:1px solid var(--line);
+  margin-bottom: 10px;
+}
+.stack{ display:grid; gap:10px; }
+
+/* unified blocks */
+.block{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:10px;
+  width:100%;
+}
+.blockTitle{ font-weight:700; margin-bottom:6px; }
+
+/* share row */
+.copyRow{ display:grid; grid-template-columns: 1fr auto; gap:8px; }
+.inputMono{
+  width:100%; height:36px;
+  border-radius:8px; border:1px solid var(--line);
+  background: var(--input-bg); color: var(--text);
+  padding:0 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+.btn{
+  padding:8px 12px; border-radius:8px;
+  border:1px solid var(--line); background:var(--panel); color:var(--text);
+  cursor: pointer;
+}
+.btn:hover {  background-color: var(--hover);}
+
+.btnFull{ width:100%; text-align:center; height:40px; }
+.btnFull:hover {  background-color: var(--hover);}
+/* stats row */
+.statRow{ display:flex; align-items:center; gap:14px; }
+
+/* right column */
+.right h3{ text-align:center; margin-bottom:8px; }
+
+.bigTitle{ font-size: var(--fs-5); font-weight:800; margin:0 0 6px; }
+.meta{ color: var(--muted); margin-bottom:12px; }
+.attach{ margin-top:12px; }
+
+
+
+
+/* Ensure long references/links wrap inside cards */
+.right ul,
+.left ul {
+  padding-left: 18px; /* matches your inline style */
+  margin: 0;
+}
+
+.right li,
+.left li {
+  margin: 4px 0;
+  max-width: 100%;
+}
+
+.right li a,
+.left li a,
+.right li span,
+.left li span {
+  display: inline;             /* keep inline look */
+  overflow-wrap: anywhere;     /* break very long words/URLs */
+  word-break: break-word;      /* fallback for older engines */
+}
+
+
+.graphBox {
+  width: 100%;
+  height: 420px;          /* fixed box height on the page */
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #0b1220;
+  overflow: hidden;
+}
+
+.graphBoxFooter {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 13px;
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+
+
+@media (max-width: 1000px){
+  .grid{ grid-template-columns: 1fr; }
+  .left{ position: static; }
+}

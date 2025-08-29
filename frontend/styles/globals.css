@@ -1,0 +1,106 @@
+/* ==== Theme tokens (teal / dark UI) ==== */
+:root{
+  --bg: #ffffff;          /* page background (same across all pages) */
+  --panel: #fafafa;       /* cards/panels */
+  --line: #b3b3b3;        /* borders */
+  --text: #363434;        /* main text on dark bg */
+  --muted: #696767;       /* secondary text */
+  --accent: #f30e0e;
+  --hover: #b4b1b1;
+  --blue: #0b2f38; 
+  --bottom: #ebeaea;    
+  --blue-light: #5aaec2; 
+  --brand-blue: #0b2f38;   /* your brand color */
+  --input-bg: var(--panel);/* set to var(--brand-blue) if you want dark inputs */
+
+  --max: 1200px;          /* content max width (fluid, not fixed frame) */
+  --gutter: 20px;
+  --gap: 16px;
+  --radius: 12px;
+
+  --sidebar-w: 260px;
+  --right-w: 280px;
+
+  --fs-1: clamp(14px, 1.2vw, 16px);
+  --fs-2: clamp(16px, 1.6vw, 18px);
+  --fs-3: clamp(18px, 2vw, 22px);
+  --fs-4: clamp(22px, 3vw, 28px);
+  --fs-5: clamp(26px, 4vw, 34px);
+
+  /* ==== Component variables (you can tweak these) ==== */
+  /* Inputs & textareas */
+  --input-bg: var(--panel);
+
+  /* Buttons (generic) */
+  --button-bg: var(--panel);
+  --button-text: var(--text);
+
+  /* Specific “Publish” button (Upload page) */
+  --publish-btn-bg:  var(--panel);   /* change if you want a different primary */
+  --publish-btn-text:  var(--panel);
+
+  /* Image sizing */
+  --person-thumb-height: clamp(140px, 18vw, 200px); /* PersonCard thumbnails */
+  --profile-avatar-size: 120px;                     /* Profile avatar size */
+}
+
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; font-size: var(--fs-1); color: var(--text); }
+body { background: var(--bg); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+h1 { font-size: var(--fs-5); margin: 0 0 8px; }
+h2 { font-size: var(--fs-4); margin: 0 0 8px; }
+h3 { font-size: var(--fs-3); margin: 0 0 8px; }
+h4 { font-size: var(--fs-2); margin: 0 0 8px; }
+
+.container {
+  max-width: var(--max);
+  padding: 0 var(--gutter);
+  margin: 0 auto;
+}
+
+/* 3-column layout for search results */
+.pageGrid {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr var(--right-w);
+  gap: var(--gap);
+  align-items: start;
+  margin-top: 16px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgba(0,0,0,.25);
+}
+
+.hideOnMobile {}
+
+/* Responsive tweaks */
+@media (max-width: 1100px) {
+  :root{ --sidebar-w: 220px; --right-w: 240px; }
+}
+@media (max-width: 900px) {
+  .pageGrid { grid-template-columns: 1fr; }
+  .hideOnMobile { display: none !important; }
+}
+
+/* Prevent text cursor from appearing inside non-input cards (fixes the avatar caret) */
+.pageGrid .card,
+.pageGrid .card * {
+  caret-color: transparent;
+}
+
+/* Hide text-caret everywhere unless it's a real input/textarea/contenteditable */
+*:not(input):not(textarea):not([contenteditable="true"]) {
+  caret-color: transparent;
+}
+/* Home grid: two columns on desktop, one on small screens */
+.homeGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 900px){
+  .homeGrid { grid-template-columns: 1fr !important; }
+}

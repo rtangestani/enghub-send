@@ -1,0 +1,26 @@
+[
+  {
+    "username": "test",
+    "password": "adtsatast",
+    "name": "test",
+    "avatar": "/images/avatar1.png",
+    "bio": "",
+    "skills": [],
+    "citations": 0,
+    "likes": 0,
+    "comments": 0,
+    "projects": []
+  },
+  {
+    "username": "rezatangestani002@gmail.com",
+    "password": "123123321",
+    "name": "rezatangestani002@gmail.com",
+    "avatar": "/images/avatar1.png",
+    "bio": "",
+    "skills": [],
+    "citations": 0,
+    "likes": 0,
+    "comments": 0,
+    "projects": []
+  }
+]
